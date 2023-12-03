@@ -54,10 +54,10 @@ You can pass the local file to overwrite the original on in the image container 
 docker run --name=http-inventory-api -p 7070:7070 -v <PATH_TO_FILE>/test_conf.yaml:/app/conf.yaml --restart always -d http_iot_inventory_api:0.1
 ```
 
-On Linux System you can use the `$(pwd)` command to automatically retrieve the path to the current local folder
+On Linux System you can use the `${PWD}` command to automatically retrieve the path to the current local folder
 
 ```bash
-docker run --name=http-inventory-api -p 7070:7070 -v $(pwd)/test_conf.yaml:/app/conf.yaml --restart always -d http_iot_inventory_api:0.1
+docker run --name=http-inventory-api -p 7070:7070 -v ${PWD}/test_conf.yaml:/app/conf.yaml --restart always -d http_iot_inventory_api:0.1
 ```
 
 ## Stop & Remove the Container
