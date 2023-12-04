@@ -45,6 +45,6 @@ for message_id in range(message_limit):
     infot = mqtt_client.publish(default_topic, payload_string)
     infot.wait_for_publish()
     print(f"Message Sent: {message_id} Topic: {default_topic} Payload: {payload_string}")
-    time.sleep(1)
+    time.sleep(5)
 
 mqtt_client.loop_stop()
