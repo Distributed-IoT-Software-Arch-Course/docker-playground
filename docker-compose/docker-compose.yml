@@ -12,8 +12,8 @@ services:
       - ${PWD}/log:/mosquitto/log
     restart: always
 
-  http-inventory-api:
-    container_name: http-inventory-api
+  iot-inventory-api:
+    container_name: http-iot-inventory-api
     image: http_iot_inventory_api:0.1
     ports:
       - "7070:7070"
