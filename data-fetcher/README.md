@@ -35,3 +35,53 @@ The created devices have the following attributes:
 3. Run the script to connect to the MQTT broker, subscribe to the specified topic, and react to incoming messages.
 
 Note: Make sure the HTTP Inventory API is running and accessible at `http://127.0.0.1:7070/api/iot/inventory`.
+
+# Docker Execution
+
+## Build the Container
+
+```bash
+docker build -t mqtt_data_fetcher:0.1 .
+```
+
+## Run the Container
+
+Run the target container with the following configuration: 
+
+- naming the container `mqtt_data_fetcher` using `--name=mqtt_data_fetcher`
+- running it in daemon mode `-d`
+- setting a restart always mode with `--restart always`
+
+```bash
+docker run --name=mqtt_data_fetcher --restart always -d mqtt_data_fetcher:0.1
+```
+
+## Run the Container using a different configuration file (e.g., changing the default API base path)
+
+The file `test_fetcher_conf.yaml` contains a changed configuration with the correct broker IP address of the host machine and the target HTTP endpoing (in our example):
+
+```yaml
+broker_ip: "192.168.1.113"
+broker_port: 1883
+target_telemetry_topic: "device/+/temperature"
+device_api_url: "http://192.168.1.113:7070/api/v1/iot/inventory/location/l0001/device"
+```
+
+You can pass the local file to overwrite the original on in the image container using the syntax `-v local_file_path:container_image_file_path` as follows:
+
+```bash
+docker run --name=mqtt_data_fetcher -v <PATH_TO_FILE>/test_fetcher_conf.yaml:/app/fetcher_conf.yaml --restart always -d mqtt_data_fetcher:0.1
+```
+
+On Linux System you can use the `${PWD}` command to automatically retrieve the path to the current local folder
+
+```bash
+docker run --name=mqtt_data_fetcher -v ${PWD}/test_fetcher_conf.yaml:/app/fetcher_conf.yaml --restart always -d mqtt_data_fetcher:0.1
+```
+
+## Stop & Remove the Container
+
+```bash
+docker stop mqtt_data_fetcher
+docker rm mqtt_data_fetcher
+```

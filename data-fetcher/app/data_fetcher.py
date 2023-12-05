@@ -51,7 +51,7 @@ def on_message(client, userdata, msg):
             check_device_url = f"{api_url}/{device_id}"
             check_device_response = requests.get(check_device_url)
 
-            print(f'Checking Device availability -> Response Code: {check_device_response.status_code}')
+            print(f'Checking Device availability {check_device_url} -> Response Code: {check_device_response.status_code}')
 
             if check_device_response.status_code == 404:
 
@@ -60,7 +60,7 @@ def on_message(client, userdata, msg):
                 # If the device does not exist, create it
                 create_device_url = api_url
                 create_device_payload = {
-                    "uuid": f"device{device_id.zfill(5)}",
+                    "uuid": device_id,
                     "name": f"Demo Temperature Sensor {device_id}",
                     "device_type": "device.temperature",
                     "manufacturer": "ACME Inc",

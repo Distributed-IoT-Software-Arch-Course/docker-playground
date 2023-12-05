@@ -1,6 +1,7 @@
 version: '3'
 
 services:
+
   mosquitto-broker:
     container_name: my-mosquitto-broker
     image: eclipse-mosquitto:2.0.12
@@ -19,4 +20,11 @@ services:
       - "7070:7070"
     volumes:
       - ${PWD}/test_conf.yaml:/app/conf.yaml
+    restart: always
+  
+  data-fetcher:
+    container_name: mqtt_data_fetcher
+    image: mqtt_data_fetcher:0.1
+    volumes:
+      - ${PWD}/test_fetcher_conf.yaml:/app/fetcher_conf.yaml
     restart: always
