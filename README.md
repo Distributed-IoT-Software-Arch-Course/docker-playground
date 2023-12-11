@@ -1,5 +1,9 @@
 # IoT Integration with MQTT and HTTP Inventory
 
+The target use case demo and deployment with Docker will be the following: 
+
+<img title="a title" alt="Alt text" src="images/scenario_image.jpg">
+
 ## MQTT Broker - Eclipse Mosquitto
 
 This section provides a guide for setting up and customizing an MQTT broker using Eclipse Mosquitto.
