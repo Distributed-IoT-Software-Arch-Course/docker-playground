@@ -3,6 +3,7 @@
 This playground has the objective to provide a basic understanding of Docker and how to use it to create, manage, and run containers.
 It offers a hands-on experience with Docker commands, Dockerfiles, and container management including also a brief presentation of Docker Compose.
 
+This repository contains also a description of Git main concepts and commands available here: [Git-Info](Git_Info.md)
 The outline of the playground is as follows:
 
 - [Container History & First Experiments](#container-history--first-experiments)
