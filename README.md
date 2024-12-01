@@ -6,7 +6,11 @@ It offers a hands-on experience with Docker commands, Dockerfiles, and container
 This repository contains also a description of Git main concepts and commands available here: [Git-Info](Git_Info.md)
 The outline of the playground is as follows:
 
-- [Container History & First Experiments](#container-history--first-experiments)
+- [Virtual Machines & Containers](#virtual-machines--containers)
+  - [Virtual Machines](#virtual-machines)
+  - [Containers](#containers)
+  - [Key Differences & Comments](#key-differences--comments)
+  - [Container History & First Experiments](#container-history--first-experiments)
 - [Docker](#docker)
   - [Installing Docker](#installing-docker)
   - [Create First Container](#create-first-container)
@@ -116,7 +120,7 @@ resource efficiency and portability are crucial.
 Choosing between VMs and Containers depends on the specific needs of your application and infrastructure. 
 In many modern applications, a combination of both technologies is used to leverage the strengths of each.
 
-## Container History & First Experiments
+### Container History & First Experiments
 
 ```text
 Computer containers are lightweight, portable, and executable software packages that encapsulate applications and their dependencies, ensuring consistent and efficient deployment across various computing environments.
