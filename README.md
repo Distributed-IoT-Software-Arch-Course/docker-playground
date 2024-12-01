@@ -337,19 +337,19 @@ Docker tells us:
 
 There are several ways to stop a container:
 
-**- Graceful Stop:**
+- **Graceful Stop**:
   - Command: `docker stop <container_name or container_id>`
   - Description: Initiates a graceful shutdown of the container, allowing it to complete any ongoing processes and save state before stopping.
   - Use Case: Recommended for standard shutdown procedures to prevent data loss or corruption.
-**- Forced Stop:**
+- **Forced Stop**:
   - Command: `docker kill <container_name or container_id>`
   - Description: Forces the immediate termination of the container, forcefully stopping all processes without waiting for them to complete.
   - Use Case: Useful when a container is unresponsive or needs to be stopped abruptly.
-**- Stopping All Containers (on Linux):**
+- **Stopping All Containers (on Linux)**:
   - Command: `docker stop $(docker ps -q)`
   - Description: Stops all running containers at once using a single command.
   - Use Case: Streamlines the process of stopping multiple containers simultaneously.
-**- Stopping by Name (on Linux):**
+- **Stopping by Name (on Linux)**:
     - Command: `docker stop $(docker ps -q --filter "name=<container_name>")`
     - Description: Stops containers based on their name, allowing more precise control.
     - Use Case: Useful when targeting specific containers in a multi-container environment.
