@@ -44,7 +44,7 @@ The outline of the playground is as follows:
 
 ## Virtual Machines & Containers
 
-![vms_vs_containers.jpg](images/vms_vs_containers.jpg)
+![vms_vs_containers.png](images/vms_vs_containers.png)
 
 In the world of virtualization and cloud computing, 
 two primary technologies are widely used: **Virtual Machines (VMs)** and **Containers**. 
@@ -94,22 +94,9 @@ In particular they enabled the following use cases:
 - Running multiple instances of the same application.
 - Developing and testing environments due to easy reproducibility.
 
-A schematic representation of containers running on a host OS is shown below:
+### Key Differences & Comments
 
-```mermaid
-graph TD
-    ContainerEngine[Container Engine]
-    subgraph Physical Hardware
-        direction LR
-        HostOS
-        ContainerEngine --> Container1[Container 1]
-        ContainerEngine --> Container2[Container 2]
-        Container1 --> App1[Application 1]
-        Container2 --> App2[Application 2]
-    end
-```
-
-## Key Differences
+Some of the main differences between Virtual Machines and Containers are summarized in the table below:
 
 | Feature              | Virtual Machines                   | Containers                               |
 |----------------------|------------------------------------|------------------------------------------|
@@ -120,8 +107,6 @@ graph TD
 | **Portability**      | Limited to hypervisor compatibility| High portability across environments     |
 | **Management**       | Requires hypervisor management     | Managed by container orchestrators (e.g., Kubernetes) |
 | **Security**         | Strong isolation                   | Good isolation but depends on the host OS|
-
-## Conclusion
 
 Both Virtual Machines and Containers have their advantages and use cases. 
 Virtual Machines provide strong isolation and are suitable for running multiple operating systems on the same hardware. 
