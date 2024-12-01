@@ -122,9 +122,11 @@ In many modern applications, a combination of both technologies is used to lever
 
 ### Container History & First Experiments
 
-```text
-Computer containers are lightweight, portable, and executable software packages that encapsulate applications and their dependencies, ensuring consistent and efficient deployment across various computing environments.
-```
+
+>Computer containers are lightweight, portable, and executable software packages 
+>that encapsulate applications and their dependencies, 
+>ensuring consistent and efficient deployment across various computing environments.
+
 
 The evolution of containers has been a significant milestone in software development and deployment practices.
 Some of the main milestones in the history of containers are:
