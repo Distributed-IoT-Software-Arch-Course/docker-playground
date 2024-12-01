@@ -1,4 +1,4 @@
 rest:
-  api_prefix: "/api/iot/inventory"
+  api_prefix: "/api/iot"
   host: "0.0.0.0"
   port: 7070

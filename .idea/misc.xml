@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.9 (tim-algorithm-ws-server)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9 (tim-algorithm-ws-server)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9 (laboratory-python-http-rest-api)" project-jdk-type="Python SDK" />
 </project>

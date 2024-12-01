@@ -1,4 +1,0 @@
-broker_ip: "155.185.92.90"
-broker_port: 1883
-target_telemetry_topic: "device/+/temperature"
-device_api_url: "http://155.185.92.90:7070/api/v1/iot/inventory/location/l0001/device"
