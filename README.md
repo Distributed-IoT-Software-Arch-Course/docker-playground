@@ -886,6 +886,12 @@ When a Docker container is created, it is connected to the default bridge networ
   - Port Mapping: Use `-p` or `--publish` to map container ports to host ports, enabling external access.
   - Example: `docker run -p 8080:80 mywebapp`
 
+The port mapping allows the container to be accessed from the host machine using the specified port.
+The `p` or `--publish` flag is used to map container ports to host ports, enabling external access.
+For example, the command `docker run -p 8080:80 mywebapp` maps port 80 in the container to port 8080 on the host machine.
+The port can be the same or different on the host and container in this way we can have multiple containers running on the same host machine or
+customize the port mapping for different services or on different environments.
+
 A visual representation of the default bridge network is shown below:
 
 ![docker_networking_bridge.png](images/docker_networking_bridge.png)
@@ -1392,14 +1398,20 @@ You can pass the local file to overwrite the original on in the
 image container using the syntax `-v local_file_path:container_image_file_path` as follows:
 
 ```bash
-docker run --name=myapp -p 7070:7070 -v <PATH_TO_FILE>/test_conf.yaml:/app/conf.yaml --restart always -d myapp:0.1
+docker run --name=myapp -p 5050:5050 -v <PATH_TO_FILE>/test_conf.yaml:/app/conf.yaml --restart always -d myapp:0.1
 ```
 
 On **Linux System** you can use the `${PWD}` command to automatically retrieve the path to the current local folder
 
 ```bash
-docker run --name=myapp -p 7070:7070 -v ${PWD}/test_conf.yaml:/app/conf.yaml --restart always -d myapp:0.1
+docker run --name=myapp -p 5050:5050 -v ${PWD}/test_conf.yaml:/app/conf.yaml --restart always -d myapp:0.1
 ```
+
+With the updated configuration you can access the API using the following URL: [http://localhost:5050/api/iot/test](http://localhost:5050/api/iot/test)
+
+This change in the configuration file is useful to show how to pass a configuration file to the container at runtime.
+In this simple example, the configuration changes only the port and the API prefix but in a real application, the configuration file can contain more complex configurations.
+Furthermore, as previously mentioned the port mapping can be also done through the -p parameter and not only through the configuration file.
 
 ### Stop & Remove the Container
 
