@@ -50,7 +50,7 @@ The outline of the playground is as follows:
 
 In the world of virtualization and cloud computing, 
 two primary technologies are widely used: **Virtual Machines (VMs)** and **Containers**. 
-Both have their unique characteristics and use cases. 
+Both have their unique characteristics and different use cases. 
 Understanding the differences between them is essential for choosing the right technology for your infrastructure needs.
 Additional information and references can be found at the following Links: [https://www.atlassian.com/microservices/cloud-computing/containers-vs-vms](https://www.atlassian.com/microservices/cloud-computing/containers-vs-vms)
 
