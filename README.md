@@ -6,43 +6,46 @@ It offers a hands-on experience with Docker commands, Dockerfiles, and container
 This repository contains also a description of Git main concepts and commands available here: [Git-Info](https://git-scm.com/docs/git)
 The outline of the playground is as follows:
 
-- [Virtual Machines & Containers](#virtual-machines--containers)
-  - [Virtual Machines](#virtual-machines)
-  - [Containers](#containers)
-  - [Key Differences & Comments](#key-differences--comments)
-  - [Container History & First Experiments](#container-history--first-experiments)
-- [Docker](#docker)
-  - [Installing Docker](#installing-docker)
-  - [Create First Container](#create-first-container)
-  - [Create an Ubuntu Container](#create-an-ubuntu-container)
-  - [Local Development & Working Environment](#local-development--working-environment)
-  - [Docker Containers Working Modes](#docker-containers-working-modes)
-  - [List Running Containers](#list-running-containers)
-  - [Stop Containers](#stop-containers)
-  - [List Stopped Containers](#list-stopped-containers)
-  - [View the Last Started Container](#view-the-last-started-container)
-  - [View Containers Logs](#view-containers-logs)
-  - [Restart Containers](#restart-containers)
-  - [Containers vs Images](#containers-vs-images)
-  - [Object-Oriented Programming & Containers](#object-oriented-programming--containers)
-  - [Creating a New Image](#creating-a-new-image)
-  - [Images History](#images-history)
-  - [Building & Caching](#building--caching)
-  - [Namespaces & Images Management](#namespaces--images-management)
-  - [Listing Available Images](#listing-available-images)
-  - [Searching for Images](#searching-for-images)
-  - [Downloading Images](#downloading-images)
-  - [Images & Tags](#images-and-tags)
-  - [Images and Multiple Architecture](#images-and-multiple-architectures)
-  - [Networking](#networking)
-  - [Volumes](#volumes)
-  - [Docker Compose](#docker-compose)
-- [Build Our First Docker Application](#build-our-first-docker-application)
-  - [Dockerfile](#dockerfile)
-  - [Build the Container](#build-the-container)
-  - [Run the Container](#run-the-container)
-  - [Run the Container with Configuration File](#run-the-container-with-configuration-file)
-  - [Stop & Remove the Container](#stop--remove-the-container)
+- [Docker Playground](#docker-playground)
+  - [Virtual Machines \& Containers](#virtual-machines--containers)
+    - [Virtual Machines](#virtual-machines)
+    - [Containers](#containers)
+    - [Key Differences \& Comments](#key-differences--comments)
+    - [Container History \& First Experiments](#container-history--first-experiments)
+  - [Docker](#docker)
+    - [Installing Docker](#installing-docker)
+    - [Create First Container](#create-first-container)
+    - [Create an Ubuntu Container](#create-an-ubuntu-container)
+    - [Local Development \& Working Environment](#local-development--working-environment)
+    - [Docker Containers Working Modes](#docker-containers-working-modes)
+    - [List Running Containers](#list-running-containers)
+    - [Stop Containers](#stop-containers)
+    - [List Stopped Containers](#list-stopped-containers)
+    - [View the Last Started Container](#view-the-last-started-container)
+    - [View Containers Logs](#view-containers-logs)
+    - [Restart Containers](#restart-containers)
+    - [Docker Images](#docker-images)
+    - [Containers vs Images](#containers-vs-images)
+    - [Object-Oriented Programming \& Containers](#object-oriented-programming--containers)
+    - [Creating a New Image](#creating-a-new-image)
+    - [Images History](#images-history)
+    - [Building \& Caching](#building--caching)
+    - [Namespaces \& Images Management](#namespaces--images-management)
+    - [Listing Available Images](#listing-available-images)
+    - [Searching for Images](#searching-for-images)
+    - [Downloading Images](#downloading-images)
+    - [Images and Tags](#images-and-tags)
+    - [Images and Multiple Architectures](#images-and-multiple-architectures)
+    - [Networking](#networking)
+    - [Volumes](#volumes)
+    - [Docker Compose](#docker-compose)
+      - [Docker Compose Usage](#docker-compose-usage)
+  - [Build Our First Docker Application](#build-our-first-docker-application)
+    - [Dockerfile](#dockerfile)
+    - [Build the Container](#build-the-container)
+    - [Run the Container](#run-the-container)
+    - [Run the Container with Configuration File](#run-the-container-with-configuration-file)
+    - [Stop \& Remove the Container](#stop--remove-the-container)
 
 ## Virtual Machines & Containers
 
@@ -946,11 +949,11 @@ For example in this scenario:
 graph TD
     subgraph Network: my_network
         direction LR
-        WebServiceIP[Web Service: python_web_app - IP: 172.18.0.2]
-        DatabaseServiceIP[Database Service: mysql_db - IP: 172.18.0.3]
+        WebServiceIP["Web Service: python_web_app - IP: 172.18.0.2"]
+        DatabaseServiceIP["Database Service: mysql_db - IP: 172.18.0.3"]
     end
 
-    WebServiceIP -->|mysql://myuser:mypassword@172.18.0.3:3306/mydatabase| DatabaseServiceIP
+    WebServiceIP -->|"mysql://myuser:mypassword@172.18.0.3:3306/mydatabase"| DatabaseServiceIP
     DatabaseServiceIP -->|Response| WebServiceIP
 ```
 
